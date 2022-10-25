@@ -1,0 +1,13 @@
+ticket = int(input('Введите количество билетов '))
+age_list = [int(input('Введите возраст посетителя ')) for i in range(ticket)]
+sum = 0
+for a, value in enumerate(age_list):
+    if value < 18:
+        sum += 0
+    elif 18 <= value < 25:
+        sum += 990
+    else:
+        sum += 1390
+if ticket > 3:
+    sum *= 0.9
+print('Сумма к оплате:', sum)
